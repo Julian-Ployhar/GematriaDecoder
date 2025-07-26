@@ -1,0 +1,96 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.gematria-container {
+  background: #fff;
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 24px rgba(60, 72, 88, 0.13);
+  min-width: 340px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2.5px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.gematria-container.animated-border {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px #6366f13a, 0 4px 24px rgba(60, 72, 88, 0.13);
+  animation: borderPulse 0.7s;
+}
+
+@keyframes borderPulse {
+  0% {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 8px #6366f14a, 0 4px 24px rgba(60, 72, 88, 0.13);
+  }
+  60% {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px #6366f13a, 0 4px 24px rgba(60, 72, 88, 0.13);
+  }
+  100% {
+    border-color: transparent;
+    box-shadow: 0 4px 24px rgba(60, 72, 88, 0.13);
+  }
+}
+
+h1 {
+  margin-bottom: 1.2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+input[type="text"] {
+  padding: 0.7rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.6rem;
+  font-size: 1.1rem;
+  outline: none;
+  margin-bottom: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border 0.2s;
+}
+input[type="text"]:focus {
+  border: 1.5px solid #6366f1;
+}
+
+button {
+  padding: 0.7rem 1.5rem;
+  background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
+  color: #fff;
+  border: none;
+  border-radius: 0.6rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
+  transition: background 0.2s, transform 0.1s;
+}
+button:hover {
+  background: linear-gradient(90deg, #4f46e5 0%, #2563eb 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.result {
+  margin-top: 1.5rem;
+  font-size: 1.15rem;
+  color: #374151;
+  background: #f1f5f9;
+  border-radius: 0.7rem;
+  padding: 1rem 1.2rem;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  box-shadow: 0 1px 4px rgba(60, 72, 88, 0.07);
+} 
